@@ -38,6 +38,7 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
+import { connect } from 'react-redux';
 
 import DeviceDetailsContainer from '../containers/DeviceDetails';
 import ServerSetup from '../containers/ServerSetup';
@@ -60,4 +61,8 @@ SelectedView.propTypes = {
     viewId: PropTypes.number.isRequired,
 };
 
-export default SelectedView;
+const mapState = ({ navMenu: { selectedItem } }) => ({
+    viewId: selectedItem > 0 ? selectedItem : 0,
+});
+
+export default connect(mapState)(SelectedView);

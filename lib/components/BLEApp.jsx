@@ -33,30 +33,32 @@
  * TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
  * THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
+import React from 'react';
+import { App, NavBar } from 'nrfconnect/shared';
 
-import React, { useEffect } from 'react';
-import { applyMiddleware, combineReducers, createStore } from 'redux';
-import { Provider } from 'react-redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import thunk from 'redux-thunk';
-import { coreReducers } from 'nrfconnect/shared';
+import BLEDeviceSelect from '../containers/BLEDeviceSelect';
+import BLEEventDialog from '../containers/BLEEventDialog';
+import DiscoveredDevices from '../containers/DiscoveredDevices';
+import SelectedView from './SelectedView';
 
-import app from './lib/reducers';
-import BLEApp from './lib/components/BLEApp';
-import { confirmUserUUIDsExist } from './lib/utils/uuid_definitions';
+const menuEntries = [
+    { text: 'Connection Map', iconClass: 'mdi mdi-sitemap' },
+    { text: 'Server Setup', iconClass: 'mdi mdi-format-indent-increase' },
+];
 
-import './resources/css/styles.scss';
+const BLENavBar = () => (
+    <NavBar
+        navMenu={menuEntries}
+        deviceSelect={<BLEDeviceSelect />}
+    />
+);
 
-const rootReducer = combineReducers({ app, ...coreReducers });
-const middleware = composeWithDevTools(applyMiddleware(thunk));
-
-export default () => {
-    useEffect(() => {
-        confirmUserUUIDsExist();
-    }, []);
-    return (
-        <Provider store={createStore(rootReducer, middleware)}>
-            <BLEApp />
-        </Provider>
-    );
-};
+export default () => (
+    <App
+        navBar={<BLENavBar />}
+        sidePanel={<DiscoveredDevices />}
+    >
+        <SelectedView />
+        <BLEEventDialog />
+    </App>
+);
