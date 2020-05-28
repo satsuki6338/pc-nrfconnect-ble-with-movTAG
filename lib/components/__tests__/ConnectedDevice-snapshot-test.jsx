@@ -40,7 +40,7 @@ import { getImmutableDevice } from '../../utils/api';
 import ConnectedDevice from '../ConnectedDevice';
 
 jest.mock('react-redux', () => ({
-    ...require.requireActual('react-redux'),
+    ...jest.requireActual('react-redux'),
     useSelector: jest.fn().mockImplementation(() => ({
         app: { adapter: { bleDriver: { adapter: { _bleDriver: { NRF_SD_BLE_API_VERSION: 5 } } } } },
     })),
