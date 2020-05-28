@@ -67,7 +67,7 @@ class AdvertisingSetup extends React.PureComponent {
 
         this.id += 1;
         this.typeValue.id = this.id;
-        return Object.assign({}, this.typeValue);
+        return { ...this.typeValue };
     }
 
     addToAdvData() {
@@ -182,12 +182,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-    const retval = Object.assign(
-        {},
-        bindActionCreators(AdvertisingActions, dispatch),
-    );
-
-    return retval;
+    return { ...bindActionCreators(AdvertisingActions, dispatch) };
 }
 
 export default connect(

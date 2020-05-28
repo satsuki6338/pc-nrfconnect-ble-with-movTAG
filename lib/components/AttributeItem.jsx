@@ -304,8 +304,7 @@ class AttributeItem extends React.Component {
                                 onClick={this.onAddAttribute}
                                 bars={this.bars + 1}
                             />
-                        )
-                    }
+                        )}
                 </div>
             </div>
         );

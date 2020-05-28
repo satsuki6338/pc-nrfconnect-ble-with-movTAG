@@ -44,19 +44,19 @@ const LineChart = ({
     data, xTotal, xAxisLabel, height,
 }) => {
     const chartRef = useRef(null);
-    const axis = {
-        type: 'linear',
-        ticks: { min: 0, padding: 6 },
-        gridLines: {
-            drawOnChartArea: false,
-            lineWidth: 2,
-            zeroLineWidth: 2,
-            tickMarkLength: 6,
-        },
-    };
 
     useEffect(() => {
-        // componentDidMount
+        const axis = {
+            type: 'linear',
+            ticks: { min: 0, padding: 6 },
+            gridLines: {
+                drawOnChartArea: false,
+                lineWidth: 2,
+                zeroLineWidth: 2,
+                tickMarkLength: 6,
+            },
+        };
+
         chartRef.current.chart = new Chart(chartRef.current, {
             type: 'line',
             options: {
@@ -86,14 +86,14 @@ const LineChart = ({
                 })),
             },
         });
-    }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [/* empty on purpose to only run on initial mount */]);
 
     useEffect(() => {
-        // componentDidUpdate
         const { chart } = chartRef.current;
         data.forEach(({ values }, index) => { chart.data.datasets[index].data = values; });
         chart.update();
-    });
+    }, [data]);
 
     return <div style={{ height: `${height}px` }}><canvas ref={chartRef} /></div>;
 };

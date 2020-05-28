@@ -35,7 +35,7 @@
  */
 
 /* eslint react/forbid-prop-types: off */
-/* eslint react/no-multi-comp: off */
+/* eslint-disable max-classes-per-file */
 
 'use strict';
 

@@ -66,8 +66,7 @@ class ServiceItem extends AttributeItem {
                         >
                             <img src={button.icon} alt="" />
                         </button>
-                    )
-                }
+                    )}
                 {children}
             </div>
         );

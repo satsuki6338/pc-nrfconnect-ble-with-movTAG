@@ -269,17 +269,14 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-    const retval = Object.assign(
-        {},
-        bindActionCreators(DeviceDetailsActions, dispatch),
-        bindActionCreators(AdvertisingActions, dispatch),
-        bindActionCreators(AdapterActions, dispatch),
-        bindActionCreators(BLEEventActions, dispatch),
-        bindActionCreators(SecurityActions, dispatch),
-        bindActionCreators(DfuActions, dispatch),
-    );
-
-    return retval;
+    return {
+        ...bindActionCreators(DeviceDetailsActions, dispatch),
+        ...bindActionCreators(AdvertisingActions, dispatch),
+        ...bindActionCreators(AdapterActions, dispatch),
+        ...bindActionCreators(BLEEventActions, dispatch),
+        ...bindActionCreators(SecurityActions, dispatch),
+        ...bindActionCreators(DfuActions, dispatch),
+    };
 }
 
 export default connect(

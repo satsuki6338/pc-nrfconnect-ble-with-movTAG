@@ -73,7 +73,7 @@ const CentralDevice = ({
         // eslint-disable-next-line no-underscore-dangle
         ((app.adapter.bleDriver.adapter || {})._bleDriver || {}).NRF_SD_BLE_API_VERSION));
 
-    useEffect(() => (onToggleAdvertising && bindHotkey('alt+a', onToggleAdvertising)), []);
+    useEffect(() => (onToggleAdvertising && bindHotkey('alt+a', onToggleAdvertising)), [bindHotkey, onToggleAdvertising]);
 
     const style = {
         position: 'relative',

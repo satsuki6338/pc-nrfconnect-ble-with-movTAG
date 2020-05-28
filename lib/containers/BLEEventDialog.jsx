@@ -333,12 +333,10 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-    const retval = Object.assign(
-        bindActionCreators(AdapterActions, dispatch),
-        bindActionCreators(BLEEventActions, dispatch),
-    );
-
-    return retval;
+    return {
+        ...bindActionCreators(AdapterActions, dispatch),
+        ...bindActionCreators(BLEEventActions, dispatch),
+    };
 }
 
 export default connect(

@@ -200,8 +200,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-    return Object.assign({},
-        bindActionCreators(DfuActions, dispatch));
+    return { ...bindActionCreators(DfuActions, dispatch) };
 }
 
 export default connect(
