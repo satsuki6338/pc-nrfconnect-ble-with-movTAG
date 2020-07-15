@@ -1,11 +1,17 @@
-# nRF Connect Bluetooth Low Energy
+# nRF Connect Bluetooth Low Energy with movTAG Support
 
 [![Build Status](https://dev.azure.com/NordicSemiconductor/Wayland/_apis/build/status/pc-nrfconnect-ble?branchName=master)](https://dev.azure.com/NordicSemiconductor/Wayland/_build/latest?definitionId=7&branchName=master)
 [![License](https://img.shields.io/badge/license-Modified%20BSD%20License-blue.svg)](LICENSE)
 
-*nRF Connect Bluetooth Low Energy* is a cross-platform tool that enables testing and development with Bluetooth Low Energy (previously called Bluetooth Smart). It allows easy setup of connections with other devices and use these connections for reading and writing to the external nodes.
+*nRF Connect Bluetooth Low Energy* is a cross-platform tool that enables testing and development with Bluetooth Low Energy (previously called Bluetooth Smart). It allows easy setup of connections with other devices and use these connections for reading and writing to the external nodes. Modified to support functionalities with movTAGs.
 
 ![screenshot](resources/screenshot.gif)
+
+# Change Log
+
+## [v1.0] - 2020-07-13
+### Added
+- Button in Settings dropdown menu when connected to a movTAG to pair and configure the connected movTAG.
 
 ## Installation
 
