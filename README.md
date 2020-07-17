@@ -23,7 +23,7 @@ Commit #5: [Function] Added Functionality for recording data from multiple movTA
 ## [v1.1.3] - 2020-07-15
 Commit #6: [Function] Added Functionality for recording data from single movTAG to COM1 port.
 ## [v1.2] - 2020-07-16
-Commit #7: [Function] Can now record data from multiple movTAGs to COM1 port. Finshed functionality for recording data from multiple movTAGs to log file and COM1 port.
+Commit #7: [Function] Can now record data from multiple movTAGs to COM1 port. Finshed functionality for recording data from multiple movTAGs to log file and COM1 port. Recording rate is 5 Hz.
 
 
 ## Installation
