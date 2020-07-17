@@ -10,8 +10,7 @@
 # Change Log
 
 ## [v1.0] - 2020-07-13
-### Added
-- Button in Settings dropdown menu when connected to a movTAG to pair and configure the connected movTAG.
+Commit #1: [GUI] Added Button for initialization-handling of movTAG
 
 ## Installation
 
