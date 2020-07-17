@@ -8,9 +8,23 @@
 ![screenshot](resources/screenshot.gif)
 
 # Change Log
-
-## [v1.0] - 2020-07-13
+## [v0.1] - 2020-07-05
 Commit #1: [GUI] Added Button for initialization-handling of movTAG
+## [v0.1.1] - 2020-07-08
+Commit #2: [Function] Added Functionality for initialization-handling of movTAG for the GUI Button
+## [v0.1.2] - 2020-07-09
+Commit #3: [Bug fixes] Fixed a fatal bug when connecting multiple movTAGs
+## [v1.0] - 2020-07-10
+Commit #3: Completed initialization-handling of movTAG functionality
+## [v1.1] - 2020-07-13
+Commit #4: [GUI] Added Button for recording data from movTAG
+## [v1.1.2] - 2020-07-14
+Commit #5: [Function] Added Functionality for recording data from multiple movTAGs to log file.
+## [v1.1.3] - 2020-07-15
+Commit #6: [Function] Added Functionality for recording data from single movTAG to COM1 port.
+## [v1.2] - 2020-07-16
+Commit #7: [Function] Can now record data from multiple movTAGs to COM1 port. Finshed functionality for recording data from multiple movTAGs to log file and COM1 port.
+
 
 ## Installation
 
